@@ -982,7 +982,7 @@ dashboards:
         }
       }
 
-      const accountTree = helpers.buildAccountTree(panel.queries[0].result, (row) => row.value[ledger.ccy]);
+      const accountTree = helpers.buildAccountTree(panel.queries[0].result, (row) => row.value[ledger.ccy] || 0);
       addNode(accountTree.children[0]);
       addNode(accountTree.children[1]);
 
